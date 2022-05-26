@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tip calculator</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: linear-gradient(to bottom right, rgba(255, 99, 180, 0.53), rgba(225, 107, 185, 0.62), rgba(195, 116, 191, 0.72), rgba(166, 124, 196, 0.81), rgba(136, 133, 202, 0.91), rgb(106, 141, 207), rgb(127, 128, 175), rgb(148, 114, 143), rgb(169, 101, 112), rgb(190, 87, 80), rgb(211, 74, 48), rgb(232, 60, 16));
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-image: linear-gradient(to bottom right, rgb(255, 99, 180), rgb(225, 121, 171), rgb(195, 142, 162), rgb(166, 164, 152), rgb(136, 185, 143), rgb(106, 207, 134), rgb(88, 173, 112), rgb(71, 138, 89), rgb(53, 104, 67), rgb(35, 69, 45), rgb(18, 35, 22), rgb(0, 0, 0));
+            padding: 20px;
+            margin: 20px;
+        }
+        .box{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        input{
+            padding:10px;
+            margin-left:30px;
+        }
+        label{
+            font-size: 20px;
+        }
+        button {background-image: linear-gradient(to right, #D31027 0%, #EA384D  51%, #D31027  100%)}
+         button{
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            align-self: center;
+            cursor: pointer;
+          }
+
+          .btn-grad:hover {
+            background-position: right center;
+            color: #fff;
+            text-decoration: none;
+          }
+         
+        input:focus{
+            background-color: pink;
+        }
+        h1{
+            font-size: 50px;
+            text-align: center;
+        }
+        @media screen and (max-width:425px) {
+            .box{
+                display: flex;
+                flex-direction: column;
+                padding: 15px 30px;
+            }
+            input{
+                margin:5px 0 0 0;
+            }
+            h1{
+                font-size: 35px;
+            }            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tip calculator</h1>
+        <div class="box">
+        <label for="">Bill Amount($)</label>
+        <input type="text" name="" id="amount" required>
+    </div>
+    <div class="box">
+        <label for="">Percentage(%)</label>
+        <input type="text" name="" id="percentage" required>
+    </div>
+    <button type="submit" id="cal">calculate</button>
+    <div class="box">
+        <label for="">Tip Amount($)</label>
+        <input type="text" name="" id="tip" disabled>
+    </div>
+    <div class="box">
+        <label for="">Total($)</label>
+        <input type="text" id="total" disabled>
+    </div>
+    </div>
+    <script>
+        document.getElementById("cal").addEventListener("click",function(){
+            var amount=document.getElementById("amount").value;
+        var percentage=document.getElementById("percentage").value;
+        if(amount==""||percentage==""){
+            alert("please fill these input boxes");
+            return false;
+        }
+        var tip=amount*(percentage/100);
+        var total=Number(amount)+tip;
+            document.getElementById("tip").value=tip;
+            document.getElementById("total").value=total;
+        })
+    </script>
+</body>
+</html>
