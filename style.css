@@ -1,0 +1,70 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom right, rgba(255, 99, 180, 0.53), rgba(225, 107, 185, 0.62), rgba(195, 116, 191, 0.72), rgba(166, 124, 196, 0.81), rgba(136, 133, 202, 0.91), rgb(106, 141, 207), rgb(127, 128, 175), rgb(148, 114, 143), rgb(169, 101, 112), rgb(190, 87, 80), rgb(211, 74, 48), rgb(232, 60, 16));
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(to bottom right, rgb(255, 99, 180), rgb(225, 121, 171), rgb(195, 142, 162), rgb(166, 164, 152), rgb(136, 185, 143), rgb(106, 207, 134), rgb(88, 173, 112), rgb(71, 138, 89), rgb(53, 104, 67), rgb(35, 69, 45), rgb(18, 35, 22), rgb(0, 0, 0));
+    padding: 20px;
+    margin: 20px;
+}
+.box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+input{
+    padding:10px;
+    margin-left:30px;
+}
+label{
+    font-size: 20px;
+}
+button {background-image: linear-gradient(to right, #D31027 0%, #EA384D  51%, #D31027  100%)}
+ button{
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    align-self: center;
+    cursor: pointer;
+  }
+
+  .btn-grad:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+  }
+ 
+input:focus{
+    background-color: pink;
+}
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+@media screen and (max-width:425px) {
+    .box{
+        display: flex;
+        flex-direction: column;
+        padding: 15px 30px;
+    }
+    input{
+        margin:5px 0 0 0;
+    }
+    h1{
+        font-size: 35px;
+    }            
+}
